@@ -20,8 +20,13 @@ useEffect(() => {
   const alreadySeen = sessionStorage.getItem("pleiades-intro-seen");
 
   if (alreadySeen) {
-    setIsVisible(false);
-    return;
+    const hideTimer = window.setTimeout(() => {
+      setIsVisible(false);
+    }, 0);
+
+    return () => {
+      window.clearTimeout(hideTimer);
+    };
   }
 
   const closeTimer = window.setTimeout(() => {

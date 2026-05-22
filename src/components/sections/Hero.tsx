@@ -30,11 +30,12 @@ export function Hero() {
           </p>
 
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
-            <Button href="#aegis">Explore AEGIS SOC</Button>
-            <Button href={siteConfig.github} variant="secondary">
-              View GitHub
-            </Button>
-          </div>
+  <Button href="#aegis">Explore AEGIS SOC</Button>
+  <Button href="/demo">View Demo</Button>
+  <Button href={siteConfig.github} variant="secondary">
+    View GitHub
+  </Button>
+</div>
         </div>
 
         <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-6 shadow-2xl shadow-cyan-950/40 backdrop-blur">
