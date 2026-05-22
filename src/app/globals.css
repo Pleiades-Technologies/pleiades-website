@@ -43,3 +43,132 @@ body {
     linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
   background-size: 48px 48px;
 }
+
+.pleiades-intro {
+  opacity: 1;
+}
+
+.pleiades-intro-closing {
+  animation: pleiadesIntroOut 900ms ease-in forwards;
+}
+
+.pleiades-star {
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  animation: pleiadesStarReveal 900ms cubic-bezier(0.22, 1, 0.36, 1) forwards,
+    pleiadesStarPulse 2400ms ease-in-out infinite;
+}
+
+.pleiades-line {
+  stroke: rgba(34, 211, 238, 0.55);
+  stroke-width: 0.35;
+  stroke-linecap: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  filter: drop-shadow(0 0 8px rgba(34, 211, 238, 0.5));
+  animation: pleiadesLineDraw 1400ms ease-out forwards;
+  animation-delay: 1000ms;
+}
+
+.pleiades-line.delay-1 {
+  animation-delay: 1150ms;
+}
+
+.pleiades-line.delay-2 {
+  animation-delay: 1300ms;
+}
+
+.pleiades-line.delay-3 {
+  animation-delay: 1450ms;
+}
+
+.pleiades-line.delay-4 {
+  animation-delay: 1600ms;
+}
+
+.pleiades-line.delay-5 {
+  animation-delay: 1750ms;
+}
+
+.pleiades-line.delay-6 {
+  animation-delay: 1900ms;
+}
+
+.pleiades-title {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: pleiadesTitleReveal 1000ms ease-out forwards;
+  animation-delay: 2100ms;
+}
+
+
+
+@keyframes pleiadesIntroOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(1.04);
+    visibility: hidden;
+  }
+}
+
+@keyframes pleiadesStarReveal {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+  }
+  70% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes pleiadesStarPulse {
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.7);
+  }
+}
+
+@keyframes pleiadesLineDraw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes pleiadesTitleReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pleiades-intro,
+  .pleiades-intro-closing,
+  .pleiades-star,
+  .pleiades-line,
+  .pleiades-title {
+    animation: none;
+  }
+
+  .pleiades-star,
+  .pleiades-title {
+    opacity: 1;
+    transform: none;
+  }
+
+  .pleiades-line {
+    stroke-dashoffset: 0;
+  }
+}

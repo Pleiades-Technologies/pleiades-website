@@ -1,3 +1,4 @@
+import { PleiadesIntro } from "@/components/effects/PleiadesIntro";
 import { Footer } from "@/components/layout/Footer";
 import { Navbar } from "@/components/layout/Navbar";
 import { AegisPreview } from "@/components/sections/AegisPreview";
@@ -10,6 +11,7 @@ import { Roadmap } from "@/components/sections/Roadmap";
 export default function Home() {
   return (
     <main className="min-h-screen bg-slate-950 text-slate-100">
+      <PleiadesIntro />
       <Navbar />
       <Hero />
       <Mission />
