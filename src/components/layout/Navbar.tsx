@@ -5,6 +5,7 @@ const navItems = [
   { label: "Mission", href: "#mission" },
   { label: "AEGIS SOC", href: "#aegis" },
   { label: "Vision", href: "#vision" },
+  { label: "Roadmap", href: "#roadmap" },
   { label: "Contact", href: "#contact" },
 ];
 

@@ -5,6 +5,7 @@ import { ContactCTA } from "@/components/sections/ContactCTA";
 import { FutureVision } from "@/components/sections/FutureVision";
 import { Hero } from "@/components/sections/Hero";
 import { Mission } from "@/components/sections/Mission";
+import { Roadmap } from "@/components/sections/Roadmap";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <Mission />
       <AegisPreview />
       <FutureVision />
+      <Roadmap />
       <ContactCTA />
       <Footer />
     </main>
