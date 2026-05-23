@@ -1,90 +1,98 @@
 # Pleiades Technologies Website
 
-Official public website for **Pleiades Technologies**, the team building
-cloud-based cybersecurity products for modern Security Operations.
+Public website for **Pleiades Technologies**, a cybersecurity-focused project
+team building cloud-oriented products for modern Security Operations.
 
-Live site: [pleiades-technologies-website.vercel.app](https://pleiades-technologies-website.vercel.app/)
+The website is live at
+[pleiades-technologies-website.vercel.app](https://pleiades-technologies-website.vercel.app/).
 
-The website currently introduces the company vision and presents **AEGIS SOC**,
-the first product in development: an enterprise-style SOC platform focused on
-alert triage, asset and vulnerability visibility, incident response workflows,
-MITRE ATT&CK mapping, auditability and executive/technical reporting.
+It introduces the company vision and presents **AEGIS SOC**, the first product
+currently in development: an enterprise-style Security Operations Center
+platform designed around alert triage, asset visibility, vulnerability context,
+incident response workflows, MITRE ATT&CK mapping, auditability and
+business-oriented security reporting.
 
 ![Pleiades Technologies homepage](public/readme/homepage-hero.png)
 
-## Repository Scope
+## Purpose
 
-This repository is the **public-facing web presence** for Pleiades Technologies.
-It is separate from the main AEGIS product repository, where the backend,
-database schema, FastAPI services, PostgreSQL foundation and operational SOC
-platform work are being developed.
+This repository contains the **public-facing presentation layer** for Pleiades
+Technologies. It is not the operational AEGIS SOC application itself. The full
+product work lives in a separate repository where the backend, PostgreSQL data
+model, FastAPI services, authentication, RBAC, seed data and database analytics
+are being developed.
 
-The goal of this site is to:
+This site gives that product work a clear public identity. It exists to:
 
-- Present Pleiades Technologies as a cloud cybersecurity company.
-- Explain the direction of AEGIS SOC without overstating unfinished product
-  capabilities.
-- Provide a clean public entry point for demos, future product pages and
-  early-access communication.
-- Support presentation workflows for the team while the full platform evolves.
+- Present Pleiades Technologies as a cloud security operations initiative.
+- Explain what AEGIS SOC is becoming without overstating unfinished features.
+- Provide a polished entry point for demos, team presentations and early access.
+- Make the product direction understandable to both technical and non-technical
+  audiences.
+- Prepare the foundation for future product pages, documentation, customer
+  areas and commercial workflows.
 
-## Current Experience
+## Website Experience
 
-| Route | Purpose | Status |
+The current website is intentionally compact, but it is structured as the first
+layer of a broader cybersecurity product ecosystem.
+
+| Route | Experience | Status |
 | --- | --- | --- |
-| `/` | Public landing page for Pleiades Technologies and AEGIS SOC | Implemented |
-| `/demo` | Interactive project presentation for AEGIS SOC | Implemented |
+| `/` | Company landing page with AEGIS SOC positioning, mission, roadmap and contact CTA | Live |
+| `/demo` | Interactive project demo for explaining architecture, team ownership and SOC workflow | Live |
 
-The homepage includes:
+The homepage focuses on the public story: who Pleiades Technologies is, what
+AEGIS SOC is, why security operations need clearer workflows, and how the site
+can evolve into a product platform over time.
 
-- Company positioning and mission.
-- AEGIS SOC product preview.
-- Future platform vision.
-- Roadmap from public site to product ecosystem.
-- Contact and early-access call to action.
-
-The demo page includes:
-
-- Team contribution sections.
-- Architecture and responsibility breakdown.
-- Simulated SOC workflow narrative.
-- Risk/reporting storyline.
-- Stack and future roadmap.
+The demo page is more presentation-oriented. It helps the team explain the
+project during reviews, walkthroughs and product discussions.
 
 ![AEGIS SOC demo overview](public/readme/demo-overview.png)
 
-### Demo Presentation Screens
+## AEGIS SOC Context
 
-The interactive demo is designed as a guided presentation surface. It gives the
-team a structured way to explain both the engineering ownership areas and the
-SOC workflow behind AEGIS.
+AEGIS SOC is being designed as an enterprise-oriented SOC platform. The product
+vision is to connect the operational work of a modern security team:
+
+- Asset inventory and exposed service visibility.
+- Vulnerability tracking and prioritization.
+- Security alert centralization and triage.
+- MITRE ATT&CK enrichment for detection context.
+- Incident creation, assignment and investigation timeline.
+- Audit logging for accountability and governance.
+- Risk scoring and reporting for analysts, managers and executives.
+
+The current product foundation is strongest on the backend and database side.
+The PostgreSQL schema, tenant-aware data model, authentication model, service
+layer and seed scenario provide the base for future operator-facing screens.
+
+This website translates that technical foundation into a public product
+narrative: what the platform is for, where it is going, and how the team can
+present it clearly.
+
+## Demo Experience
+
+The interactive demo is a guided presentation surface. It is not a fake claim
+of production readiness; it is a structured way to explain the project, the
+team's ownership areas and the SOC workflow that AEGIS is being built around.
 
 ![AEGIS SOC team contribution screen](public/readme/demo-team.png)
 
-The live walkthrough section turns the product story into a step-by-step SOC
-sequence: detection, enrichment, triage, incident response, accountability,
-risk communication and reporting.
+The demo includes:
+
+- Team contribution cards for database, backend, authorization, cybersecurity
+  and frontend work.
+- Architecture and responsibility breakdown.
+- A SOC storyline from detection to incident response.
+- Simulated workflow states for alert enrichment, triage, timeline updates and
+  reporting.
+- Talking points that help each team member present their part of the project.
 
 ![AEGIS SOC live walkthrough screen](public/readme/demo-walkthrough.png)
 
-## Product Context: AEGIS SOC
-
-AEGIS SOC is being designed as an enterprise-oriented Security Operations Center
-platform. The broader product direction includes:
-
-- Asset inventory and vulnerability management.
-- Security alert centralization and triage.
-- MITRE ATT&CK enrichment.
-- Incident response and timeline tracking.
-- Audit logging and role-aware access control.
-- Risk scoring and reporting for technical and executive stakeholders.
-
-The current product foundation, in the separate AEGIS repository, is strongest
-on the backend/database side: PostgreSQL schema design, FastAPI services,
-authentication, RBAC, seed data and database-level risk analytics. This website
-acts as the public narrative layer around that product work.
-
-## Tech Stack
+## Technical Stack
 
 | Layer | Technology |
 | --- | --- |
@@ -92,7 +100,11 @@ acts as the public narrative layer around that product work.
 | UI | React 19 |
 | Language | TypeScript |
 | Styling | Tailwind CSS 4 |
-| Deployment target | Vercel |
+| Deployment | Vercel |
+
+The project uses the Next.js App Router and keeps the interface componentized
+around landing sections, layout elements, reusable UI primitives and the
+interactive demo experience.
 
 ## Project Structure
 
@@ -108,7 +120,7 @@ acts as the public narrative layer around that product work.
 |   |   |-- layout/          # Navbar and footer
 |   |   |-- sections/        # Homepage sections
 |   |   `-- ui/              # Shared UI primitives
-|   `-- data/                # Site-level configuration
+|   `-- data/                # Site configuration and public links
 |-- package.json
 |-- next.config.ts
 |-- tsconfig.json
@@ -129,7 +141,7 @@ Start the development server:
 npm run dev
 ```
 
-Open:
+Open the local site:
 
 ```text
 http://localhost:3000
@@ -148,24 +160,24 @@ Run linting:
 npm run lint
 ```
 
-## Development Notes
+## Development Principles
 
 - Keep this repository focused on the public website and presentation layer.
-- Do not copy backend/database responsibilities into this repo.
-- Product claims should stay aligned with the actual AEGIS implementation
-  status.
-- Future product UI screenshots should come from the real product interface,
-  not from unrelated mockups.
-- When adding Next.js code, read the local Next.js 16 documentation in
-  `node_modules/next/dist/docs/` first, as this project uses APIs and
-  conventions that may differ from older Next.js versions.
+- Keep product claims aligned with the real AEGIS implementation status.
+- Do not move backend, database or API responsibilities into this website repo.
+- Use real screenshots from the live site or actual product interfaces.
+- Preserve a clear distinction between the marketing website, the interactive
+  project demo and the future operational SOC product.
+- Before changing Next.js behavior, read the local Next.js 16 documentation in
+  `node_modules/next/dist/docs/`, because this version may differ from older
+  Next.js APIs and conventions.
 
 ## Roadmap
 
-1. Expand the AEGIS SOC product page with feature sections and real product
-   screenshots.
-2. Add a clearer early-access or contact workflow.
-3. Connect public messaging to future customer login and protected product
-   surfaces.
-4. Add case-study style content once the operational dashboard is mature.
-5. Keep README screenshots refreshed when the public design changes.
+1. Expand the AEGIS SOC product narrative with more dedicated feature sections.
+2. Add a stronger early-access or contact workflow.
+3. Introduce real product screenshots as the operational dashboard matures.
+4. Prepare future pages for documentation, product modules and cloud platform
+   access.
+5. Keep the public website aligned with the actual state of the AEGIS product.
+
